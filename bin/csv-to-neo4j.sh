@@ -9,4 +9,4 @@ databaseName=$3
 
 cd $tmpDir
 
-~/neo4j-community-3.4.9/bin/neo4j-admin import --database=$databaseName --nodes="RunConfigurations_Entity.csv,SingleError_Entity.csv, TotalError_Entity.csv,Gene_Entity.csv, Individual_Entity.csv" --relationships="Individual_Gene_Edge.csv, Individual_TotalError_Edge.csv, Inherited_Gene_Edge.csv, ParentOf_Edge.csv, RunConfigurations_Individual_Edge.csv, TotalError_SingleError_Edge.csv"
+/mnt/ResearchSpace/neo4j-community-3.2.6/bin/neo4j-admin import --database=$databaseName --nodes="RunConfigurations_Entity.csv" --nodes="SingleError_Entity.csv" --nodes="TotalError_Entity.csv" --nodes="Gene_Entity.csv" --nodes="Individual_Entity.csv" --relationships="Individual_Gene_Edge.csv" --relationships="Individual_TotalError_Edge.csv" --relationships="Inherited_Gene_Edge.csv" --relationships="ParentOf_Edge.csv" --relationships="RunConfigurations_Individual_Edge.csv" --relationships="TotalError_SingleError_Edge.csv"

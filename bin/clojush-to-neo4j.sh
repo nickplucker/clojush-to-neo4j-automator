@@ -22,10 +22,10 @@ fi
 printf "Converting edn to csv...\n"
 ./bin/edn-to-csv.sh $ednFile etc/edn-to-csv.jar $tmpDir
 
-cp $tmpDir ~/Desktop
+# cp -r $tmpDir ~/Desktop
 
 printf "Creating database...\n"
-./bin/csv-to-neo4j.sh ~/neo4j-community-3.4.9 $tmpDir TEST_DB
+./bin/csv-to-neo4j.sh ~/neo4j-community-3.4.9 $tmpDir test_db2.db
 
 printf "Deleting tmpDir...\n"
 rm -rf $tmpDir
