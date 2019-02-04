@@ -6,6 +6,7 @@
 #        ./bin/clojush-to-neo4j <path to edn file>
 
 ednFile=$1
+databaseName=$2
 tmpDir=$(mktemp -d)
 
 # Make a tmp directory to store csv files created from data munger
@@ -25,7 +26,7 @@ printf "Converting edn to csv...\n"
 # cp -r $tmpDir ~/Desktop
 
 printf "Creating database...\n"
-./bin/csv-to-neo4j.sh ~/neo4j-community-3.4.9 $tmpDir test_db2.db
+./bin/csv-to-neo4j.sh ~/neo4j-community-3.4.9 $tmpDir $databaseName
 
 printf "Deleting tmpDir...\n"
 rm -rf $tmpDir
